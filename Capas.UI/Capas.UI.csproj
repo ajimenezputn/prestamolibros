@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91C199E0-4C9B-45D3-99AF-5E41E418DF3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capas.UI</RootNamespace>
+    <AssemblyName>Capas.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBLibrosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosEstudiantesMasSolicitan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosEstudiantesMasSolicitan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosHistoricoLibros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosHistoricoLibros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBLibrosmasPrestados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLibrosmasPrestados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGestionPrestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionPrestados.Designer.cs">
+      <DependentUpon>FrmGestionPrestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMisGestionesSolicitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMisGestionesSolicitados.Designer.cs">
+      <DependentUpon>FrmMisGestionesSolicitados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTramiteEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTramiteEspera.Designer.cs">
+      <DependentUpon>FrmTramiteEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmLibroAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmLibroAutor.Designer.cs">
+      <DependentUpon>FrmLibroAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoAutores.Designer.cs">
+      <DependentUpon>FrmMantenimientoAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoEditoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoEditoriales.Designer.cs">
+      <DependentUpon>FrmMantenimientoEditoriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoLibros.Designer.cs">
+      <DependentUpon>FrmMantenimientoLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientosCentroYsecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientosCentroYsecciones.Designer.cs">
+      <DependentUpon>FrmMantenimientosCentroYsecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientos\FrmMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reporte\FrmEstudiantesMasSolicitaron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmEstudiantesMasSolicitaron.Designer.cs">
+      <DependentUpon>FrmEstudiantesMasSolicitaron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmPendientesDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmPendientesDevolucion.Designer.cs">
+      <DependentUpon>FrmPendientesDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibroQr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibroQr.Designer.cs">
+      <DependentUpon>FrmReporteLibroQr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibrosMasPrestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibrosMasPrestados.Designer.cs">
+      <DependentUpon>FrmReporteLibrosMasPrestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibrosPrestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmReporteLibrosPrestados.Designer.cs">
+      <DependentUpon>FrmReporteLibrosPrestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmReporteQr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmReporteQr.Designer.cs">
+      <DependentUpon>FrmReporteQr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmVerQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmVerQR.Designer.cs">
+      <DependentUpon>FrmVerQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\FrmVerQrLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte\FrmVerQrLibro.Designer.cs">
+      <DependentUpon>FrmVerQrLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FmDetalleLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FmDetalleLibro.Designer.cs">
+      <DependentUpon>FmDetalleLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FrmBusquedaAvanzadaEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FrmBusquedaAvanzadaEstudiante.Designer.cs">
+      <DependentUpon>FrmBusquedaAvanzadaEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FrmBusquedaAvanzadaLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FrmBusquedaAvanzadaLibro.Designer.cs">
+      <DependentUpon>FrmBusquedaAvanzadaLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FrmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FrmConfiguracion.Designer.cs">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FrmDetalleEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FrmDetalleEstudiante.Designer.cs">
+      <DependentUpon>FrmDetalleEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tramite\FrmTramite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tramite\FrmTramite.Designer.cs">
+      <DependentUpon>FrmTramite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verDetalle.Designer.cs">
+      <DependentUpon>verDetalle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmGestionPrestados.resx">
+      <DependentUpon>FrmGestionPrestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMisGestionesSolicitados.resx">
+      <DependentUpon>FrmMisGestionesSolicitados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTramiteEspera.resx">
+      <DependentUpon>FrmTramiteEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmLibroAutor.resx">
+      <DependentUpon>FrmLibroAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmMantenimientoAutores.resx">
+      <DependentUpon>FrmMantenimientoAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmMantenimientoEditoriales.resx">
+      <DependentUpon>FrmMantenimientoEditoriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmMantenimientoLibros.resx">
+      <DependentUpon>FrmMantenimientoLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmMantenimientosCentroYsecciones.resx">
+      <DependentUpon>FrmMantenimientosCentroYsecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientos\FrmMantenimientoUsuarios.resx">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reporte\FrmEstudiantesMasSolicitaron.resx">
+      <DependentUpon>FrmEstudiantesMasSolicitaron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmPendientesDevolucion.resx">
+      <DependentUpon>FrmPendientesDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmReporteLibroQr.resx">
+      <DependentUpon>FrmReporteLibroQr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmReporteLibrosMasPrestados.resx">
+      <DependentUpon>FrmReporteLibrosMasPrestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmReporteLibrosPrestados.resx">
+      <DependentUpon>FrmReporteLibrosPrestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmReporteQr.resx">
+      <DependentUpon>FrmReporteQr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmVerQR.resx">
+      <DependentUpon>FrmVerQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\FrmVerQrLibro.resx">
+      <DependentUpon>FrmVerQrLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\reportComprobante.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\reporteLibrosMasPrestados.rdlc" />
+    <EmbeddedResource Include="reporte\reportEstudiantesQueMasSolicitaron.rdlc" />
+    <EmbeddedResource Include="reporte\ReportGestionPrestados.rdlc" />
+    <EmbeddedResource Include="reporte\ReportHistoricoLibros.rdlc" />
+    <EmbeddedResource Include="reporte\reportLibrosPendienteDevolucion.rdlc" />
+    <EmbeddedResource Include="reporte\ReportLibrosSolicitadosGestion.rdlc" />
+    <EmbeddedResource Include="reporte\ReportQR.rdlc" />
+    <EmbeddedResource Include="Tramite\FmDetalleLibro.resx">
+      <DependentUpon>FmDetalleLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\FrmBusquedaAvanzadaEstudiante.resx">
+      <DependentUpon>FrmBusquedaAvanzadaEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\FrmBusquedaAvanzadaLibro.resx">
+      <DependentUpon>FrmBusquedaAvanzadaLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\FrmDetalleEstudiante.resx">
+      <DependentUpon>FrmDetalleEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tramite\FrmTramite.resx">
+      <DependentUpon>FrmTramite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verDetalle.resx">
+      <DependentUpon>verDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBLibrosDataSet.xsc">
+      <DependentUpon>DBLibrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosDataSet.xss">
+      <DependentUpon>DBLibrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet1.xsc">
+      <DependentUpon>DBLibrosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosDataSet1.xss">
+      <DependentUpon>DBLibrosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet2.xsc">
+      <DependentUpon>DBLibrosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosDataSet2.xss">
+      <DependentUpon>DBLibrosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet3.xsc">
+      <DependentUpon>DBLibrosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosDataSet3.xss">
+      <DependentUpon>DBLibrosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosEstudiantesMasSolicitan.xsc">
+      <DependentUpon>DBLibrosEstudiantesMasSolicitan.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosEstudiantesMasSolicitan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosEstudiantesMasSolicitan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosEstudiantesMasSolicitan.xss">
+      <DependentUpon>DBLibrosEstudiantesMasSolicitan.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosHistoricoLibros.xsc">
+      <DependentUpon>DBLibrosHistoricoLibros.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosHistoricoLibros.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosHistoricoLibros.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosHistoricoLibros.xss">
+      <DependentUpon>DBLibrosHistoricoLibros.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosmasPrestados.xsc">
+      <DependentUpon>DBLibrosmasPrestados.xsd</DependentUpon>
+    </None>
+    <None Include="DBLibrosmasPrestados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLibrosmasPrestados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLibrosmasPrestados.xss">
+      <DependentUpon>DBLibrosmasPrestados.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Capas.Entidades.qr.Qr.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capas.Entidades\Capas.Entidades.csproj">
+      <Project>{627c8cd8-1744-49e9-808a-f8a472529329}</Project>
+      <Name>Capas.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capas.logica\Capas.Logica.csproj">
+      <Project>{b78eed2e-ac93-4e05-bff0-bce50c5efa4c}</Project>
+      <Name>Capas.Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recycle Bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Recycle Bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\File New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 48x48\Arrow Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\WDD Ravenna Icons\PNG 24x24\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Save_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_New_Copy_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Trash_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Lock_2_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Trash_Can_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Save_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Search_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Close_Window_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Edit_Property_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_New_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Minus_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Customer_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_User_Male_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Settings_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_List_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_File_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Contacts_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Remove_Book_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_Book_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_User_Location_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Books_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checked_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Print_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_New_Resume_Template_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Info_Squared_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Maximize_Window_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Minimize_Window_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Minimize_Window_96px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checked_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Increase_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Maintenance_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Protect_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_No_Access_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_View_Details_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Staff_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Parliament_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Blog_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_Shelf_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_Stack_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Investment_Portfolio_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_Shelf_40px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Course_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_Book_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Remove_Book_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Students_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_QR_Code_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Buy_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Settings_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_View_Details_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_Shelf_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Open_Book_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Logout_Rounded_Left_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Access_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Lock_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Checked_Checkbox_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_QR_Code_48px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

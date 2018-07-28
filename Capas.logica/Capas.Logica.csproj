@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B78EED2E-AC93-4E05-BFF0-BCE50C5EFA4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capas.Logica</RootNamespace>
+    <AssemblyName>Capas.Logica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\QR\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="comprobante\ComprobanteLogica.cs" />
+    <Compile Include="Configuracionlogica.cs" />
+    <Compile Include="facade\TramitarFacade.cs" />
+    <Compile Include="libro\AutorLogica.cs" />
+    <Compile Include="libro\EditorialLogica.cs" />
+    <Compile Include="libro\LibroFactory.cs" />
+    <Compile Include="libro\LibroLogica.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qrLogica\QrLogica.cs" />
+    <Compile Include="tramites\DevolucionLogica.cs" />
+    <Compile Include="tramites\FactoryTramite.cs" />
+    <Compile Include="tramites\PrestamoLogica.cs" />
+    <Compile Include="usuario\CentroEducativoLogica.cs" />
+    <Compile Include="usuario\SeccionLogica.cs" />
+    <Compile Include="usuario\UsuarioFactory.cs" />
+    <Compile Include="usuario\UsuarioLogica.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capas.Datos\Capas.Datos.csproj">
+      <Project>{f6d25f01-a154-413a-a953-21f1f5bd9234}</Project>
+      <Name>Capas.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capas.Entidades\Capas.Entidades.csproj">
+      <Project>{627c8cd8-1744-49e9-808a-f8a472529329}</Project>
+      <Name>Capas.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
